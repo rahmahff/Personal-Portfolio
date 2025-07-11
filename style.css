@@ -1,0 +1,633 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+    font-family: 'Jost', sans-serif;
+}
+
+.banner{
+    position: relative;
+    background: url("assets/bg.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding-top: 15%;
+    padding-bottom: 20%;
+    color:#000000;
+    padding-left: 10%;
+    justify-content: center;
+}
+
+#canvas-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    max-width: 50%;
+    z-index: 1;
+}
+
+.text-banner {
+    position: relative;
+    z-index: 2;
+}
+
+.text-banner h1{
+    margin: -10px 0px 0px;
+    font-size: 80px;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.text-banner h5{
+    margin-bottom: 10px;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+span{
+    color: #f75023;
+}
+
+.text-banner h3{
+    margin: -80px 10px 0px;
+    color: #f75023;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.navbar {
+    padding: 10px 20px; 
+    max-width: 100%;
+    background-color: #ffffff;
+    position: sticky;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.navbar-brand span {
+    color: #f75023;
+}
+
+.navbar-nav .nav-link {
+    color: #000000;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f75023; 
+}
+
+.navbar-toggler {
+    border-color: transparent; 
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%2899, 99, 99, 0.8%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+#services {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff; 
+    padding: 50px 0;
+    margin-top: 50px;
+}
+
+.container-fluid{
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.head-staff {
+    padding-top: 150px;
+}
+
+.head-service {
+    padding-top: 30px;
+    margin-bottom: 30px;
+}
+
+.col-contact{
+    padding-top: 120px;
+}
+.heading{
+    text-align: center;
+}
+
+.heading h2{
+    font-size: 48px;
+    font-weight: 500;
+    margin: 7px 0px 20px;
+    line-height: 1.1;
+}
+
+.heading h3{
+    color: #e28468;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.icon-circle {
+    border: 2px solid #303131; /* Atur warna border sesuai keinginan */
+    height: 60px;
+    width: 60px;
+    border-radius: 50%; /* Membuat lingkaran */
+    padding: 10px; 
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+    font-size: 200%; /* Ukuran ikon, sesuaikan sesuai kebutuhan */
+    color: #000000; /* Warna ikon */
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.icon-circle.one {
+    background: #d9d1fa;
+}
+
+.icon-circle.two {
+    background: #faedce;
+}
+
+.icon-circle.three {
+    background: #baebcd;
+}
+
+.service-box { 
+    border-radius: 10px; 
+    padding: 20px; 
+    transition: transform 0.3s; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    margin-bottom: 30px;
+    background: #ffffff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.service-box:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); 
+}
+
+.card{
+    max-width: 300px;
+    width: 100%;
+}
+
+#about{
+    background-color: #ffffff;
+    padding: 80px 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.client img {
+    height: auto;
+    max-height: 50px;
+  }
+
+  .staff-img {
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover; 
+}
+
+.rounded-circle {
+    border: 2px solid #e28468; /* Ganti #007bff dengan warna yang Anda inginkan */
+    background-color: white; /* Ganti dengan warna latar belakang yang diinginkan */
+}
+
+
+#contact {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;  /* Memusatkan secara horizontal */
+    justify-content: center;  /* Memusatkan secara vertikal jika ada ruang */
+    height: 100vh;  /* Atur tinggi untuk memusatkan secara vertikal */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 1rem; 
+    width: 100%;  /* Mengambil lebar penuh untuk elemen di dalamnya */
+    max-width: 400px;  /* Atur lebar maksimum agar tidak terlalu lebar */
+    text-align: center; /* Memusatkan teks di dalam form */
+}
+
+.form-control {
+    height: 40px; 
+}
+
+#message {
+    height: 160px;
+}
+
+button[type="submit"] {
+    align-self: center; 
+    margin-top: 4px;
+    width: 100%;
+}
+
+
+.btn-info {
+    background-color: #f75023; 
+    border: none; 
+}
+
+.btn-info:hover {
+    background-color: #e28468; 
+    transition: background-color 0.3s ease; 
+}
+
+.img-fluid {
+    border-radius: 15px;
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.text-about {
+    padding: 20px;
+    text-align: left;
+}
+
+.text-about p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.btn-custom {
+    background-color: #f75023; 
+    border: none; 
+}
+
+.btn-custom:hover {
+    background-color: #e28468; 
+    transition: background-color 0.3s ease; 
+}
+
+@media (max-width: 768px) {
+    #about {
+        padding: 40px 0;
+    }
+
+    .img-fluid {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .text-about {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .text-banner h1 {
+        font-size: 40px;
+    }
+
+    .banner {
+        padding: 10%;
+    }
+
+    .navbar {
+        padding: 5px;
+    }
+
+    /* Aturan tambahan untuk elemen lain */
+}
+
+/* Media query untuk perangkat sedang (contoh: tablet) */
+@media (max-width: 992px) {
+    .text-banner h1 {
+        font-size: 60px;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .text-about {
+        margin-top: 20px;
+    }
+}
+
+.row.pt-4 {
+    margin-top: 30px;
+    row-gap: 30px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* General responsive container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+}
+
+/* Section spacing */
+section {
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+/* Responsive styles for all sections */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+
+    /* Banner section */
+    .banner {
+        padding-top: 20%;
+    }
+
+    .text-banner h1 {
+        font-size: 60px;
+    }
+
+    /* Services section */
+    #services {
+        padding: 60px 0;
+    }
+
+    .service-box {
+        margin-bottom: 30px;
+    }
+
+    /* About section */
+    .about-container {
+        flex-direction: column;
+    }
+
+    .text-about {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    /* Portfolio section */
+    .card {
+        margin-bottom: 30px;
+    }
+
+    /* Staff section */
+    .staff-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* Canvas container */
+    #canvas-container {
+        max-width: 100%;
+        height: 50vh;
+        position: relative;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+
+    /* Banner section */
+    .banner {
+        padding: 30% 5% 10%;
+        text-align: center;
+    }
+
+    .text-banner h1 {
+        font-size: 40px;
+    }
+
+    .text-banner h3 {
+        margin-top: 0;
+        font-size: 18px;
+    }
+
+    .text-banner h5 {
+        font-size: 16px;
+    }
+
+    /* Services section */
+    #services {
+        padding: 40px 0;
+    }
+
+    .heading h2 {
+        font-size: 36px;
+    }
+
+    .heading h3 {
+        font-size: 18px;
+    }
+
+    /* Portfolio section */
+    #portfolio {
+        padding: 40px 0;
+    }
+
+    .row.justify-content-center.g-3 {
+        margin: 0;
+    }
+
+    .col-md-3 {
+        padding: 0 15px;
+    }
+
+    /* About section */
+    #about {
+        padding: 40px 0;
+    }
+
+    .img-fluid {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .text-about {
+        padding: 15px;
+    }
+
+    /* Staff section */
+    #staff {
+        padding: 40px 0;
+    }
+
+    .col-md-4 {
+        margin-bottom: 30px;
+    }
+
+    /* Contact section */
+    #contact {
+        padding: 40px 15px;
+    }
+
+    .form-group {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Banner section */
+    .banner {
+        padding: 40% 5% 10%;
+    }
+
+    .text-banner h1 {
+        font-size: 32px;
+    }
+
+    /* Services section */
+    .service-box {
+        margin: 0 15px 30px;
+    }
+
+    /* Portfolio section */
+    .card {
+        margin: 0 15px 30px;
+    }
+
+    /* Staff section */
+    .staff-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* Contact form */
+    .form-group {
+        max-width: 100%;
+    }
+}
+
+/* Fix for navigation on mobile */
+@media (max-width: 992px) {
+    .navbar-nav {
+        padding: 15px 0;
+    }
+
+    .navbar-toggler {
+        padding: 4px 8px;
+    }
+
+    .navbar-brand {
+        font-size: 20px;
+    }
+}
+
+/* Utility classes for better spacing */
+.py-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+@media (max-width: 768px) {
+    .py-section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+/* Fix for row gutters */
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+[class*="col-"] {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Fix for portfolio cards */
+.card {
+    height: 100%;
+    margin-bottom: 30px;
+}
+
+/* Fix for service boxes */
+.service-box {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Fix for staff section */
+.staff-member {
+    margin-bottom: 30px;
+}
+
+/* Fix for contact form */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Tambahan untuk konten service box */
+.service-box h4 {
+    margin: 15px 0;
+}
+
+.service-box p {
+    margin-bottom: 15px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
